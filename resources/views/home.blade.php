@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div>
-                    @if (Auth::user()->admin)
+                    @can('show_menu_admin')
                         <div class="bg-primary">
                             Menú Administrador
                         </div>
@@ -40,7 +40,7 @@
                             <a href="#" class="btn btn-default" role="button">Ver Informes</a>
                             <a href="{-{ route('users.index') }}" class="btn btn-default" role="button">Listar Usuarios</a>
                         </div>
-                    @endif
+                    @endcan
                 </div>
             </div>
         </div>
